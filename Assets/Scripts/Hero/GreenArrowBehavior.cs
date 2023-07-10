@@ -9,21 +9,23 @@ public class GreenArrowBehavior : MonoBehaviour
     public float mHeroRotateSpeed = 90f / 2f; // 90-degrees in 2 seconds
     public float shootInterval = 0.2f;
     public bool canShoot = false;
+    public bool sequencing = true;
+
 
     public int mTotalEggCount = 0;
     public int touchedEnemyCount = 0;
     public int destroyedEnemyCount = 0;
 
-    public CoolDownBar bar;
 
-    void Awake()
+
+    // Start is called before the first frame update
+    void Start()
     {
     }
 
     // Update is called once per frame
     void Update()
     {
-
         Vector3 p = transform.localPosition;
 
         if (Input.GetKeyDown(KeyCode.M))
@@ -84,6 +86,11 @@ public class GreenArrowBehavior : MonoBehaviour
         {
             Application.Quit();
         }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            sequencing = !sequencing;
+        }
     }
 
     IEnumerator ShootBullet()
@@ -96,7 +103,6 @@ public class GreenArrowBehavior : MonoBehaviour
     }
 
     void fire(){
-        bar.isActive = true;
         GameObject e = Instantiate(Resources.Load("Prefabs/Egg") as GameObject, transform.position, transform.rotation); // Prefab MUST BE locaed in Resources/Prefab folder!
         mTotalEggCount++;
     }
@@ -124,6 +130,19 @@ public class GreenArrowBehavior : MonoBehaviour
 
     public string touchedEnemyStatus() { return "TouchedEnemy:" + touchedEnemyCount; }
     public string destroyedEnemyStatus() { return "ENEMY:Count:10,Destroyed:" + destroyedEnemyCount; }
+
+    public string WaypointsModeStatus()
+    {
+        if (sequencing == true)
+        {
+            return "WAYPOINTS:(sequencing)";
+        }
+        else
+        {
+            return "WAYPOINTS:(random)";
+        }
+    }
+
 
 
 

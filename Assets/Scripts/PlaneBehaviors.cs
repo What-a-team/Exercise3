@@ -9,7 +9,6 @@ public class PlaneBehaviors : MonoBehaviour
     private float threshold = 0.5f;  // set threshold for ener
     static private GreenArrowBehavior sGreenArrow = null;
     static public void SetGreenArrow(GreenArrowBehavior g) { sGreenArrow = g; }
-
     public int touchedEnemyCount = 0;
 
     // Start is called before the first frame update

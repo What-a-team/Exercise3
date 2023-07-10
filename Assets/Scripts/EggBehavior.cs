@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class EggBehavior : MonoBehaviour
 {
     static private GreenArrowBehavior sGreenArrow1 = null;
@@ -11,7 +12,7 @@ public class EggBehavior : MonoBehaviour
 
     private const float kEggSpeed = 40f;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
     }
 
@@ -50,10 +51,6 @@ public class EggBehavior : MonoBehaviour
             Destroy(transform.gameObject);  // kills self
 
         }
-
     }
-
-
-
 }
 

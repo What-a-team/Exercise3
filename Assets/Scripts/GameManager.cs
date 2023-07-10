@@ -5,6 +5,9 @@ using UnityEngine.UI;  // Required to work with UI, e.g., Text
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager sGameManager = null;
+    public static GameManager TheGameManager() { return sGameManager; }
+
     public static GameManager sTheGlobalBehavior = null; // Single pattern
     public int mExistingPlaneCount = 0;
     public int mTotalPlaneCount = 0;
@@ -17,6 +20,8 @@ public class GameManager : MonoBehaviour
     public Text mPlayModeEcho = null;
     public Text mTouchedEnemyEcho = null;
     public Text mDestroyedEnemyEcho = null;
+    public Text mWaypointModeEcho = null;
+
 
 
 
@@ -29,6 +34,9 @@ public class GameManager : MonoBehaviour
         mPlayModeEcho = GameObject.Find("PlayModeEcho").GetComponent<Text>();
         mTouchedEnemyEcho = GameObject.Find("TouchedEcho").GetComponent<Text>();
         mDestroyedEnemyEcho = GameObject.Find("EnemyEcho").GetComponent<Text>();
+        mWaypointModeEcho = GameObject.Find("WaypointsMode").GetComponent<Text>();
+
+
 
 
 
@@ -38,6 +46,8 @@ public class GameManager : MonoBehaviour
         Debug.Assert(mPlayModeEcho != null);    // Assume setting in the editor!
         Debug.Assert(mTouchedEnemyEcho != null);    // Assume setting in the editor!
         Debug.Assert(mDestroyedEnemyEcho != null);    // Assume setting in the editor!
+        Debug.Assert(mWaypointModeEcho != null);    // Assume setting in the editor!
+
 
 
         Debug.Assert(mHero != null);
@@ -62,6 +72,8 @@ public class GameManager : MonoBehaviour
         // Connect up everyone who needs to know about each other
         EggBehavior.SetGreenArrow(mHero);
         PlaneBehaviors.SetGreenArrow(mHero);
+        AirShipBehavior.SetGreenArrow(mHero);
+
 
 
 
@@ -78,6 +90,8 @@ public class GameManager : MonoBehaviour
         mPlayModeEcho.text = mHero.PlayModeStatus();
         mTouchedEnemyEcho.text = mHero.touchedEnemyStatus();
         mDestroyedEnemyEcho.text = mHero.destroyedEnemyStatus();
+        mWaypointModeEcho.text = mHero.WaypointsModeStatus();
+
 
 
 
@@ -98,5 +112,6 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
 
 }
