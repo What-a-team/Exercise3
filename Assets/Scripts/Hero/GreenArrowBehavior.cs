@@ -10,21 +10,20 @@ public class GreenArrowBehavior : MonoBehaviour
     public float shootInterval = 0.2f;
     public bool canShoot = false;
 
-
     public int mTotalEggCount = 0;
     public int touchedEnemyCount = 0;
     public int destroyedEnemyCount = 0;
 
+    public CoolDownBar bar;
 
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Vector3 p = transform.localPosition;
 
         if (Input.GetKeyDown(KeyCode.M))
@@ -97,6 +96,7 @@ public class GreenArrowBehavior : MonoBehaviour
     }
 
     void fire(){
+        bar.isActive = true;
         GameObject e = Instantiate(Resources.Load("Prefabs/Egg") as GameObject, transform.position, transform.rotation); // Prefab MUST BE locaed in Resources/Prefab folder!
         mTotalEggCount++;
     }

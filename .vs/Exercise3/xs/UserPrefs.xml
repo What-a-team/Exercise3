@@ -1,25 +1,21 @@
-﻿<Properties StartupConfiguration="{06CDCA7B-388B-7AC8-2413-3243003B4F89}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EggBehavior.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Hero/GreenArrowBehavior.cs">
     <Files>
-      <File FileName="Assets/Scripts/EggBehavior.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Hero/GreenArrowBehavior.cs" Line="18" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Exercise3" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="EggBehavior.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="Exercise3" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>Assembly-CSharp.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c0114d4f-3489-43b7-b9d6-cbc2b2b3037b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
