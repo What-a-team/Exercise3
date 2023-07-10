@@ -350,6 +350,7 @@
 "Assets/Scripts/Hero/GreenArrowBehavior.cs"
 "Assets/Scripts/PlaneBehaviors.cs"
 "Assets/Scripts/Utilities/CameraSupport.cs"
+"Assets/Scripts/Waypoint.cs"
 -langversion:9.0
 
 /deterministic

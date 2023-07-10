@@ -8,7 +8,7 @@ public class AirShipBehavior : MonoBehaviour
     private const float kTurnRate = 0.03f;
     private const float kMySpeed = 20f;
     private const float kVeryClose = 25f;
-    private int currentTarget = 0;
+    public int currentTarget = 0;
 
     static private GreenArrowBehavior sGreenArrow = null;
     static public void SetGreenArrow(GreenArrowBehavior g) { sGreenArrow = g; }

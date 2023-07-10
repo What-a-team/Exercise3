@@ -44,6 +44,7 @@
      <Compile Include="Assets\Scripts\AirShipBehavior.cs" />
      <Compile Include="Assets\Scripts\Utilities\CameraSupport.cs" />
      <Compile Include="Assets\Scripts\Hero\GreenArrowBehavior.cs" />
+     <Compile Include="Assets\Scripts\Waypoint.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:\Software\Unity\2021.3.25f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

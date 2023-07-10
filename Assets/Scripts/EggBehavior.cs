@@ -49,6 +49,7 @@ public class EggBehavior : MonoBehaviour
         if (collision.gameObject.tag == "waypoint")
         {
             Destroy(transform.gameObject);  // kills self
+            sGreenArrow1.OneLessEgg();
 
         }
     }
