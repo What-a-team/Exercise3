@@ -16,6 +16,7 @@ public class GreenArrowBehavior : MonoBehaviour
     public int touchedEnemyCount = 0;
     public int destroyedEnemyCount = 0;
 
+    public CoolDownBar bar;
 
 
     // Start is called before the first frame update
@@ -103,6 +104,7 @@ public class GreenArrowBehavior : MonoBehaviour
     }
 
     void fire(){
+        bar.isActive = true;
         GameObject e = Instantiate(Resources.Load("Prefabs/Egg") as GameObject, transform.position, transform.rotation); // Prefab MUST BE locaed in Resources/Prefab folder!
         mTotalEggCount++;
     }
