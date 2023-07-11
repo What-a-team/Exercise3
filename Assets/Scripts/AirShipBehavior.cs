@@ -57,8 +57,19 @@ public class AirShipBehavior : MonoBehaviour
     {
         Vector3 v = p - transform.localPosition;
         transform.up = Vector3.LerpUnclamped(transform.up, v, r);
-    }
+        if ((Mathf.Abs(transform.up.x) < 0.00001f) && (Mathf.Abs(transform.position.y) > 66))
+        {
+            if (v.x > 0)
+            {
+                transform.Rotate(transform.forward, 60 * kMySpeed * Time.smoothDeltaTime);
+            }
+            else
+            {
+                transform.Rotate(transform.forward, -60 * kMySpeed * Time.smoothDeltaTime);
 
+            }
+        }
+    }
     private void UpdateCurrentTarget()
     {
         if (sGreenArrow.sequencing == true)
